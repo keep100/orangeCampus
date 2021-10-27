@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(235, 235, 235);
+}
+
+#main {
+    width: 70%;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 1px 1px rgb(145, 145, 145);
+}
+
+#main p {
+    font-weight: 600;
+    font-size: large;
+}
+
+.form-control {
+    font-size: 12px;
+}
+
+form .goods_label {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    float: left;
+}
+
+form .goods_label div {
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 3px 8px;
+    float: left;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.initColor {
+    background-color: rgb(235, 235, 235);
+}
+
+.changeColor {
+    background-color: lightskyblue;
+}
+
+.selectType {
+    height: 35px;
+}
+
+#exampleFormControlSelect1, #exampleFormControlSelect2 {
+    width: 150px;
+    float: left;
+    margin-right: 50px;
+}
+
+#exampleFormControlSelect1 option, #exampleFormControlSelect2 option {
+    font-size: 14px;
+}
+
+.upload {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin-left: 50px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.pic_box {
+    display: none;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    float: left;
+}
+
+.pic_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.upload:hover {
+    border: 1px solid #4088cf;
+}
+
+.upload input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.tn-box {
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -60px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(145, 145, 145);
+    background: whitesmoke;
+    display: none;
+}
+
+.tn-box-active {
+    display: block;
+    animation: fadeOut 1s linear forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    99% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.tn-box div {
+    float: left;
+    height: 100%;
+    width: 40px;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    height: 80px;
+    padding-left: 21.5%;
+    background-color: white;
+    box-shadow: 0 1px 5px rgb(145, 145, 145);
+    line-height: 80px;
+}
+
+.title div {
+    float: left;
+}
+
+.title img {
+    width: 300px;
+    height: 15px;
+}
+
+.common-footer p {
+    margin-bottom: 0;
+}

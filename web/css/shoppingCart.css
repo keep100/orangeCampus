@@ -1,0 +1,20 @@
+.shoppingCart {
+    float: left;
+    width: 260px;
+    height: 78px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.shoppingCart a {
+    color: #474747;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.shoppingCart a:hover {
+    color: rgb(82, 157, 204);
+}

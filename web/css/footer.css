@@ -1,0 +1,26 @@
+.common-footer{
+    width: 100%;
+    background-color: #282c36;
+    margin-top: 100px;
+}
+.footerMain{
+    height: 200px;
+    margin: auto 200px;
+}
+.footerMain div{
+    width: 500px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+.footerMain div p{
+    color: rgb(153,153,153);
+}
+.copyright{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(34,37,46);
+    color: rgb(153,153,153);
+    text-align: center;
+    line-height: 50px;
+}

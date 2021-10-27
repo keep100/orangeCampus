@@ -1,0 +1,42 @@
+.starability-basic {
+    display: block;
+    position: relative;
+    width: 150px;
+    min-height: 30px;
+    padding: 0;
+    border: none
+}
+
+.starability-basic>input {
+    position: absolute;
+    margin-right: -100%;
+    opacity: 0
+}
+
+.starability-basic>input:checked~label, .starability-basic>input:focus~label, .starability-basic>input:hover~label {
+    background-position: 0 -20px
+}
+
+.starability-basic>input:focus+label {
+    outline: 1px dotted #999
+}
+
+.starability-basic>label {
+    position: relative;
+    display: inline-block;
+    margin: 0 3px;
+    float: right;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    cursor: pointer;
+    background-image: url(../image/star.png);
+    background-repeat: no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi), screen and (-webkit-min-device-pixel-ratio:2) {
+    .starability-basic>label {
+        background-image: url(../starability-images/icons@2x.png);
+        background-size: 10px 10px
+    }
+}

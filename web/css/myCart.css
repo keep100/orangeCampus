@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(235, 235, 235);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.title button {
+    float: right;
+    border: none;
+    color: white;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.85;
+}
+
+.title button:hover {
+    opacity: 1;
+}
+
+.allGoods {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.allGoods ul {
+    width: 100%;
+    list-style: none;
+}
+
+.allGoods ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid gray;
+    background-color: rgb(250, 250, 250);
+}
+
+.allGoods ul li img {
+    width: 100px;
+    height: 85%;
+}
+
+.allGoods ul li a {
+    color: rgb(50, 50, 50);
+}
+
+.allGoods ul li a:hover {
+    color: orange;
+}

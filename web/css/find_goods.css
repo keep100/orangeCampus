@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(235, 235, 235);
+}
+
+.common-footer p {
+    margin-bottom: 0;
+}
+
+.main {
+    width: 80%;
+    margin: auto;
+}
+
+.seekInfo {
+    width: 100%;
+    height: 240px;
+    padding: 10px;
+}
+
+.seekInfo .info1, .seekInfo .info2 {
+    width: 49%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: snow;
+}
+
+.seekInfo .info1:hover, .seekInfo .info2:hover {
+    box-shadow: 0 5px 10px rgb(204, 204, 204);
+}
+
+.seekInfo .info1 {
+    float: left;
+}
+
+.seekInfo .info2 {
+    float: right;
+}
+
+.seekInfo .userInfo {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.seekInfo .userInfo div {
+    width: 40px;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+.seekInfo .userInfo img {
+    height: 100%;
+    width: 100%;
+}
+
+.goods_name p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.seekInfo .goods_desc {
+    height: 50px;
+}
+
+.seekInfo .price {
+    float: left;
+    width: 100%;
+}
+
+.pageBar {
+    text-align: center;
+}

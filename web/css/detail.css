@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(235, 235, 235);
+}
+
+.main {
+    width: 100%;
+    height: 300px;
+}
+
+.tn-box {
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -60px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(145, 145, 145);
+    background: whitesmoke;
+    display: none;
+}
+
+.tn-box-active {
+    display: block;
+    animation: fadeOut 1s linear forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    99% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.tn-box div {
+    float: left;
+    height: 100%;
+    width: 40px;
+    text-align: center;
+}
+
+.goods_detail {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.textContent {
+    height: 100%;
+    width: 60%;
+    float: left;
+}
+
+.preview_img {
+    position: relative;
+    margin: 10px;
+    width: 240px;
+    height: 240px;
+    float: left;
+}
+
+.preview_img #before {
+    width: 100%;
+    height: 100%;
+}
+
+.preview_img #mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(233, 233, 146);
+    opacity: 0.3;
+    border: 1px solid gray;
+    cursor: move;
+}
+
+.preview_img #big {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: 400px;
+    height: 370px;
+    overflow: hidden;
+    border: 1px solid rgb(233, 221, 192);
+}
+
+.preview_img #after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 450px;
+}
+
+.textContent .text {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.textContent #userInfo {
+    height: 40px;
+    line-height: 40px;
+}
+
+.textContent #userInfo img {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    float: left;
+}
+
+.textContent .text #goodsName {
+    margin: 15px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.textContent .text #desc {
+    margin: 15px 10px;
+}
+
+.textContent .text .goodsInfo {
+    height: 20px;
+    line-height: 20px;
+    margin: 15px 10px;
+}
+
+.textContent .text .goodsInfo div {
+    height: 100%;
+    float: left;
+}
+
+.textContent .text .goodsInfo img {
+    margin-right: 15px;
+}
+
+.goodsInfo button {
+    border: 1px solid rgb(52, 160, 226);
+    font-size: 10px;
+    height: 100%;
+    margin-top: 2px;
+    margin-right: 5px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: rgb(230, 247, 255);
+    color: rgb(0, 157, 255);
+}
+
+.comment {
+    width: 70%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.tab-group {
+    position: relative;
+    border: 1px solid #eee;
+    margin-top: 2.5em;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab-group section {
+    opacity: 0;
+    height: 0;
+    padding: 0 1em;
+    overflow: hidden;
+    transition: opacity 0.4s ease, height 0.4s ease;
+}
+
+.tab-group section.active {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+.tab-nav {
+    list-style: none;
+    margin: -2.5em -1px 30px 0;
+    padding: 0;
+    height: 2.5em;
+    overflow: hidden;
+}
+
+.tab-nav li {
+    display: inline;
+}
+
+.tab-nav li a {
+    top: 1px;
+    position: relative;
+    display: block;
+    float: left;
+    border-radius: 10px 10px 0 0;
+    background: #eee;
+    color: grey;
+    line-height: 2em;
+    padding: 0 1em;
+    text-decoration: none;
+    margin-top: .5em;
+    margin-right: 1px;
+    transition: background .2s ease, line-height .2s ease, margin .2s ease;
+}
+
+.tab-nav li.active a {
+    background: #6EB590;
+    color: white;
+    line-height: 2.5em;
+    margin-top: 0;
+}
+
+.common-footer p {
+    margin-bottom: 0;
+}
+
+.tab-group section ul li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    margin: 20px 0;
+}
+
+.tab-group section ul li .user_pic {
+    height: 100%;
+    width: 50px;
+    margin: 0 10px;
+    float: left;
+}
+
+.tab-group section ul li img {
+    height: 100%;
+    width: 100%;
+}
+
+.tab-group section ul .score_box {
+    height: 100%;
+    float: left;
+}
+
+.tab-group section ul .score_box p {
+    height: 20px;
+    margin: 0 0 0 20px;
+    line-height: 20px;
+}
+
+.tab-group .tab-nav button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(110, 181, 144);
+    color: rgb(246, 255, 255);
+    float: right;
+    margin: 5px 15px 0 0;
+}
+
+.tab-group .tab-nav button:hover {
+    opacity: 0.85;
+}
+
+.model {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    min-height: 200px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.model .header {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(222, 226, 230);
+}
+
+.model .header button {
+    float: right;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    margin-top: -35px;
+}
+
+.model .content {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(222, 226, 230);
+}
+
+.model .content textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid rgb(190, 185, 185);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.model-footer {
+    width: 100%;
+    padding: 10px;
+    float: left;
+}
+
+.model-footer button {
+    height: 35px;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    margin: 0 5px;
+    opacity: 0.8;
+}
+
+.model-footer button:hover {
+    opacity: 1;
+}
+
+.block {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.2;
+}
+
+.goodsInfo #addToCart {
+    border: none;
+    float: right;
+    padding: 0 10px;
+    background-color: tomato;
+    color: white;
+    opacity: 0.85;
+    height: 30px;
+}
+
+.goodsInfo #addToCart:hover {
+    opacity: 1.0;
+}

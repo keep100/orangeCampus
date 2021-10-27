@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    border-radius: 30%;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgb(248, 218, 162) url(../image/上箭头.png) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 120px;
+    }
+}
+
+#login {
+    position: absolute;
+    width: auto;
+    height: 30px;
+    right: 40px;
+    top: 5px;
+    line-height: 30px;
+}
+
+#login div {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+#login img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+#login a {
+    float: right;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+#login a:hover {
+    color: rgba(34, 151, 219, 0.473);
+}
+
+.top {
+    width: 100%;
+    min-height: 600px;
+    background-attachment: fixed;
+    background-image: url("../image/classroom.jpeg");
+    background-size: cover;
+    text-align: center;
+    color: ghostwhite;
+}
+
+#title {
+    padding-top: 180px;
+    padding-bottom: 20px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#desc {
+    font-size: 25px;
+}
+
+.cardList {
+    position: absolute;
+    width: 1050px;
+    height: 280px;
+    bottom: -50px;
+    left: 50%;
+    margin-left: -525px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    background: rgba(245, 245, 245, 0.726);
+    position: relative;
+    height: 100%;
+    width: 350px;
+    float: left;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    border-radius: 5px;
+}
+
+.card:hover {
+    color: whitesmoke;
+}
+
+.card:hover .block {
+    display: block;
+}
+
+#card1:hover {
+    background: url("../image/card2.jpg");
+    background-size: cover;
+}
+
+#card2:hover {
+    background: url("../image/card1.jpeg");
+    background-size: cover;
+}
+
+#card3:hover {
+    background: url("../image/card3.jpg");
+    background-size: cover;
+}
+
+.block {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #474747;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.cardContent {
+    position: relative;
+    margin: 45px;
+    z-index: 2;
+}
+
+.cardContent h2 {
+    padding-bottom: 25px;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.cardContent p {
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+
+.cardContent button {
+    margin-top: 15px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(82, 211, 170);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardContent a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.desc {
+    width: 100%;
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 420px;
+    float: left;
+}
+
+.picture {
+    float: left;
+    width: 60%;
+    height: 100%;
+    margin: 30px 60px;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    width: 300px;
+    float: left;
+    margin-top: 180px;
+}
+
+.content h1 {
+    color: rgb(136, 218, 136);
+    margin-bottom: 15px;
+}
+
+#login .tipBox {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 80px;
+}
+
+#login ul {
+    background-color: rgb(106, 150, 151);
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+#login li {
+    list-style: none;
+    text-align: center;
+}
+
+#login li a {
+    float: none;
+}
+
+#login li a:hover {
+    color: white;
+}
