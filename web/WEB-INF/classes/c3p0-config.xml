@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+    <!-- 默认配置，如果没有指定则使用这个配置 -->
+    <default-config>
+        <!--指定连接数据源的基本属性-->
+        <property name="user">sa</property>
+        <property name="password">sqlserver2018</property>
+        <property name="jdbcUrl">jdbc:sqlserver://localhost:1433;database=orangeCampus</property>
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+
+        <!--若数据库中连接数不足时，一次向数据库服务器申请多少个连接-->
+        <property name="acquireIncrement">10</property>
+        <property name="checkoutTimeout">30000</property>
+        <property name="idleConnectionTestPeriod">30</property>
+        <!--初始化连接数个数-->
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <!--数据库连接池中最大的数据库连接数-->
+        <property name="maxPoolSize">100</property>
+        <!--数据库连接池中最小的数据库连接数-->
+        <property name="minPoolSize">5</property>
+        <property name="maxStatements">200</property>
+    </default-config>
+</c3p0-config>

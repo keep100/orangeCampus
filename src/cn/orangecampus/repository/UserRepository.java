@@ -96,15 +96,15 @@ public class UserRepository {
     public static int register(String username, String password, String tel) {
         Connection con = JdbcTools.getConnection();
         int id = countAllUsers() + 1;
-        String sql = "insert into [user] values(?,?,?,?,null,?,null)";
+        String sql = "insert into [user] values(?,?,?,null,?,null,?)";
         PreparedStatement statement = null;
         try {
             statement = con.prepareStatement(sql);
             statement.setInt(1, id);
             statement.setString(2, username);
             statement.setString(3, password);
-            statement.setString(4, tel);
-            statement.setString(5, "image/默认头像.png");
+            statement.setString(4, "image/默认头像.png");
+            statement.setString(5, tel);
             return statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -114,14 +114,14 @@ public class UserRepository {
         return 0;
     }
 
-    public static String findPwd(String tel) {
+    public static String findPwd(String email) {
         Connection con = JdbcTools.getConnection();
-        String sql = "select password from [user] where tel=?";
+        String sql = "select password from [user] where email=?";
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
             statement = con.prepareStatement(sql);
-            statement.setString(1, tel);
+            statement.setString(1, email);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 return resultSet.getString(1);

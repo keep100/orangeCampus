@@ -214,7 +214,7 @@
                         <input type="password" class="input" data-type="password" id="confirm_pwd">
                     </div>
                     <div class="group">
-                        <label class="label">手机号</label>
+                        <label class="label">电子邮箱</label>
                         <input type="text" class="input" id="tel" name="tel">
                     </div>
                     <div class="group">
@@ -236,7 +236,7 @@
     </div>
     <div class="findPwd">
         <div class="text" id="telBox">
-            <label for="telInput">请输入手机号</label>
+            <label for="telInput">请输入电子邮箱</label>
             <input type="text" name="tel" id="telInput">
         </div>
         <div class="text" style="display: none;" id="pwdBox">
@@ -301,13 +301,13 @@
                 return;
             }
             if (!$('#tel').val()) {
-                $('.tn-box p').text("请输入手机号");
+                $('.tn-box p').text("请输入邮箱");
                 show_alert();
                 $('#tel').focus();
                 return;
             }
-            if ($('#tel').val().length != 11) {
-                $('.tn-box p').text("请输入11位手机号");
+            if ($('#tel').val().indexOf('@') === -1) {
+                $('.tn-box p').text("请输入正确的邮箱格式");
                 show_alert();
                 $('#tel').focus();
                 return;
@@ -339,17 +339,26 @@
         $('.forgetPwd .header a').click(function () {
             $('#block').css('z-index', 0);
             $('.forgetPwd').hide();
+            $('.forgetPwd button').attr("disabled", false);
         })
         $('.forgetPwd button').click(function () {
+            if (!$('.forgetPwd #telInput').val()) {
+                $('.tn-box p').text("请输入电子邮箱");
+                $('.tn-box').css('z-index',3);
+                show_alert();
+                return;
+            }
             $('.forgetPwd #telBox').hide();
             $('.forgetPwd #pwdBox').show();
             $.ajax({
                 url: '${pageContext.request.contextPath}/findPwd',
                 method: 'post',
-                data: {tel:$('.forgetPwd #telInput').val()},
+                data: {tel: $('.forgetPwd #telInput').val()},
                 dataType: 'text',
-                success:function (data){
+                success: function (data) {
                     $('.forgetPwd #pwdBack').val(data);
+                    $('.forgetPwd #telInput').val('');
+                    $('.forgetPwd button').attr("disabled", true);
                 }
             })
         })

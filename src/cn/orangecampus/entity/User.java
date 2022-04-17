@@ -5,17 +5,18 @@ package cn.orangecampus.entity;
  */
 public class User {
     private Integer id;
-    private String username,password,tel,weChatId,iconUrl,signature;
+    private String username, password, weChatId, iconUrl, signature, email;
 
-    public User(){}
-    public User(Integer id, String username, String password, String tel, String weChatId, String iconUrl, String signature) {
+    public User() {}
+
+    public User(Integer id, String username, String password, String weChatId, String iconUrl, String signature, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
-        this.tel = tel;
         this.weChatId = weChatId;
         this.iconUrl = iconUrl;
         this.signature = signature;
+        this.email = email;
     }
 
     public Integer getId() {
@@ -42,14 +43,6 @@ public class User {
         this.password = password;
     }
 
-    public String getTel() {
-        return tel;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
-    }
-
     public String getWeChatId() {
         return weChatId;
     }
@@ -72,5 +65,13 @@ public class User {
 
     public void setSignature(String signature) {
         this.signature = signature;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

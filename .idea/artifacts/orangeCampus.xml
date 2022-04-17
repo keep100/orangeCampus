@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="orangeCampus">
+    <output-path>$PROJECT_DIR$/out/artifacts/orangeCampus</output-path>
+    <root id="archive" name="orangeCampus.war">
+      <element id="artifact" artifact-name="orangeCampus:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web/WEB-INF" />
+    </root>
+  </artifact>
+</component>

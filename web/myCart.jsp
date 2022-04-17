@@ -75,8 +75,9 @@
                     </ul>
                     <div class="icon" style="margin:10px 0 0 15px;overflow: hidden;width: 200px;">
                         <img src="${sessionScope.user.iconUrl}">
-                        <div id="login" style="text-align: left;"><a href="login.html"
-                                                                     style="margin-left: 10px;">${sessionScope.user.username}</a></div>
+                        <div id="login" style="text-align: left;"><a href="javascript:;"
+                                                                     style="margin-left: 10px;">${sessionScope.user.username}</a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -88,7 +89,11 @@
     <h2 style="color: coral;"><strong>我的购物车</strong></h2>
     <form action="${pageContext.request.contextPath}/delAll" method="get">
         <input type="text" name="userId" value="${sessionScope.user.id}" style="display: none;">
+        <input type="text" id="flagInput" name="buyFlag" value="false" style="display: none;">
         <button type="submit">清空购物车</button>
+        <button type="button" style="margin-right: 10px" id="buy">付款购买</button>
+        <a href="buyRecord.jsp" style="text-decoration: none;margin-right: 10px;color: #2f3238;
+height: 40px;line-height: 40px;">购买记录</a>
     </form>
 </div>
 <div class="allGoods">
@@ -154,7 +159,7 @@
         $.ajax({
             url: '${pageContext.request.contextPath}/getCartRecord',
             method: 'post',
-            data: {userId:"${sessionScope.user.id}"},
+            data: {userId: "${sessionScope.user.id}"},
             dataType: 'text',
             success: function (data) {
                 let cartItems = data.split("#");
@@ -187,7 +192,7 @@
 
 
         //点击商品名称跳转到对应商品详情
-        $('.allGoods ul').on('click','li #goodsName',function (){
+        $('.allGoods ul').on('click', 'li #goodsName', function () {
             $(this).siblings('form').submit();
         })
 
@@ -199,6 +204,12 @@
                 method: 'post',
                 data: {userId:${sessionScope.user.id}, goodsId: $(this).parent().find('input').val()}
             })
+        })
+
+        //购买全部商品并发送发货邮件
+        $('#buy').click(function (){
+            $('#flagInput').val('true');
+            $(this).parent().submit();
         })
     })
 </script>

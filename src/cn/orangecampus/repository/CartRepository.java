@@ -134,8 +134,4 @@ public class CartRepository {
             JdbcTools.release(con, statement, null);
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(queryRecord(1,1));
-    }
 }

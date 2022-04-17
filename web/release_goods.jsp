@@ -86,6 +86,12 @@
                    style="width: 30%;">
         </div>
         <div class="form-group">
+            <label for="weChat_id">手机号</label>
+            <input name="weChatId" type="email" class="form-control" id="tel" aria-describedby="emailHelp"
+                   placeholder="手机号"
+                   style="width: 30%;">
+        </div>
+        <div class="form-group">
             <label>图片上传&nbsp;&nbsp;&nbsp;&nbsp;<small>请上传一张完整、清晰的实物图</small></label>
             <div>
                 <div class="pic_box"><img></div>
